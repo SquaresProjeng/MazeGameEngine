@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.pas,E:\Square's ProjEng\Совместная работа\MAZE map creator\Unit1.pas=E:\Square's ProjEng\Совместная работа\MAZE map creator\Gamelavels.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.606,E:\Squares ProjEng\Совместная работа\Структурированный движок\code\ResCon.pas=E:\Squares ProjEng\Совместная работа\Структурированный движок\code\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.bdsproj,C:\Users\Соня\Desktop\NEW ENGINE MAZE\Project1.bdsproj=C:\Users\Соня\Desktop\NEW ENGINE MAZE\MAZEENGINE.bdsproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.045,=E:\Squares ProjEng\Совместная работа\Структурированный движок\code\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.429,E:\Squares ProjEng\Совместная работа\Структурированный движок\code\Tex.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.292,E:\Square's ProjEng\Совместная работа\MineCraft Delphi\Unit1.pas=E:\Square's ProjEng\Совместная работа\MineCraft Delphi\Mechanic.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.302,=E:\Square's ProjEng\Совместная работа\MineCraft Delphi\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.971,=E:\Square's ProjEng\Совместная работа\MineCraft Delphi\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.383,E:\Squares ProjEng\Совместная работа\Структурированный движок\code\MGE.dproj=E:\Squares ProjEng\Совместная работа\Структурированный движок\code\MAZEENGINE.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.171,=E:\Squares ProjEng\Совместная работа\Структурированный движок\code\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.pas,C:\Users\Соня\Desktop\NEW ENGINE MAZE\Unit1.pas=C:\Users\Соня\Desktop\NEW ENGINE MAZE\GUI.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.pas,C:\Users\Соня\Desktop\NEW ENGINE MAZE\Unit1.pas=C:\Users\Соня\Desktop\NEW ENGINE MAZE\Command.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.dfm,C:\Users\Соня\Desktop\NEW ENGINE MAZE\Unit1.dfm=C:\Users\Соня\Desktop\NEW ENGINE MAZE\GUI.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.pas,C:\Users\Соня\Desktop\NEW ENGINE MAZE\Unit2.pas=C:\Users\Соня\Desktop\NEW ENGINE MAZE\Resurce.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.pas,C:\Users\Соня\Desktop\NEW ENGINE MAZE\Unit1.pas=C:\Users\Соня\Desktop\NEW ENGINE MAZE\GFonts.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.053,=E:\Squares ProjEng\Совместная работа\Структурированный движок\code\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.653,E:\Squares ProjEng\Совместная работа\Структурированный движок\code\Scripter.pas=E:\Squares ProjEng\Совместная работа\Структурированный движок\code\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.455,E:\Squares ProjEng\Совместная работа\Структурированный движок\code\Controller.pas=E:\Squares ProjEng\Совместная работа\Структурированный движок\code\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.pas,C:\Users\Соня\Desktop\NEW ENGINE MAZE\Unit1.pas=C:\Users\Соня\Desktop\NEW ENGINE MAZE\Tex.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="GUI.pas"/>
+    <File Path="GUI.dfm"/>
+    <File Path="Resurce.pas"/>
+    <File Path="Command.pas"/>
+    <File Path="GFonts.pas"/>
+    <File Path="Gamelavels.pas"/>
+    <File Path="Mechanic.pas"/>
+    <File Path="Controller.pas"/>
+    <File Path="ResCon.pas"/>
+    <File Path="Scripter.pas"/>
+    <File Path="GUIunit.pas"/>
+    <File Path="MGEFBO.pas"/>
+    <File Path="Phisics.pas"/>
+    <File Path="EnScene.pas"/>
+    <File Path="MGEAudioEngine.pas"/>
+    <File Path="MGEAIController.pas"/>
+    <File Path="upinst.pas"/>
+    <File Path="upinst.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

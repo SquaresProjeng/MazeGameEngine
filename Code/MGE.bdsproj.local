@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021.03.27 14:29:35.178.pas,G:\Squares ProjEng\Совместная работа\RPG\code\Unit1.pas=G:\Squares ProjEng\Совместная работа\RPG\code\Phisics.pas</Transaction>
+    <Transaction>2021.04.26 22:47:24.929.pas,G:\Squares ProjEng\Совместная работа\MGE(FrameBuffer)\code\Unit1.pas=G:\Squares ProjEng\Совместная работа\MGE(FrameBuffer)\code\GUIunit.pas</Transaction>
+    <Transaction>2021.04.27 18:29:41.693.pas,G:\Squares ProjEng\Совместная работа\MGE(FrameBuffer)\code\Unit1.pas=G:\Squares ProjEng\Совместная работа\MGE(FrameBuffer)\code\MGEFBO.pas</Transaction>
+    <Transaction>2021.06.15 12:05:14.753.pas,G:\Squares ProjEng\Совместная работа\MGE (Animator)\code\Unit1.pas=G:\Squares ProjEng\Совместная работа\MGE (Animator)\code\MGEAnimation.pas</Transaction>
+    <Transaction>2021.06.15 12:05:27.344.pas,G:\Squares ProjEng\Совместная работа\MGE (Animator)\code\MGEAnimation.pas=G:\Squares ProjEng\Совместная работа\MGE (Animator)\code\Animation.pas</Transaction>
+    <Transaction>2021.08.07 18:07:19.669.pas,C:\Users\Соня\Desktop\MGE (MapCreator)\code\Unit1.pas=C:\Users\Соня\Desktop\MGE (MapCreator)\code\EnScene.pas</Transaction>
+    <Transaction>2021.09.27 21:15:03.154.pas,G:\Squares ProjEng\Совместная работа\MGE (Clear) v.002\code\Animation.pas=</Transaction>
+    <Transaction>2021.11.05 17:57:23.786.pas,C:\Users\Соня\Desktop\Мини RPG игра на PascalABC\SP Racer 04_11_2021\MGE (Clear) v.002\code\Unit1.pas=C:\Users\Соня\Desktop\Мини RPG игра на PascalABC\SP Racer 04_11_2021\MGE (Clear) v.002\code\MGEAIController.pas</Transaction>
+    <Transaction>2021.11.13 19:32:56.916.pas,C:\Users\Соня\Desktop\Мини RPG игра на PascalABC\MG Engine (Map Redactor)\MGE (Clear) v.002\code\Unit2.pas=C:\Users\Соня\Desktop\Мини RPG игра на PascalABC\MG Engine (Map Redactor)\MGE (Clear) v.002\code\upinst.pas</Transaction>
+    <Transaction>2021.11.13 19:32:56.916.dfm,C:\Users\Соня\Desktop\Мини RPG игра на PascalABC\MG Engine (Map Redactor)\MGE (Clear) v.002\code\Unit2.dfm=C:\Users\Соня\Desktop\Мини RPG игра на PascalABC\MG Engine (Map Redactor)\MGE (Clear) v.002\code\upinst.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
