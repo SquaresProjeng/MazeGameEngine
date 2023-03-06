@@ -1,0 +1,15 @@
+MyNewMap
+StartFile
+mgefire
+2
+100 20 -200 2 10 20 30 0 -1 0 2
+500 20 -200 4 10 20 30 0 -2 0 2
+mgetexture
+
+mgesprite
+0
+mgemodel
+0
+
+
+EndFile

@@ -1,0 +1,13 @@
+This is Graphics map script for MAZE GAME ENGINE v0.1
+Script structure: 
+	Identificators (Name = IDModel IDTexture) ->
+	Map (Name.Draw(Pos,Rot,Size);) 
+Script run!!!
+Identificators
+Cube = 1 1
+Cube2 = 1 6
+Myach = 2 6
+Map
+Cube.Draw(100 50 0, 0 0 0, 40);
+Cube2.Draw(100 50 0, 0 0 0, 40);
+Myach.Draw(P P P, 0 0 0, 10);	

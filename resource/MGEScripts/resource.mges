@@ -1,0 +1,23 @@
+This is resourse script for MAZE GAME ENGINE v0.1
+Script structure: Textures -> Models -> GraphMaps -> PhisMaps
+Script run!!!
+Textures
+\resource\MGEIMG\MGEMaterials\grass\grass.tga
+\resource\MGEIMG\map\map.tga
+\resource\MGEIMG\Sun.tga
+\resource\MGEIMG\Suneffect.tga
+\resource\MGEModels\BMW 7S\bmw.tga
+\resource\MGEIMG\boll.tga
+\resource\MGEIMG\lamp.tga
+\resource\MGEIMG\Menu.tga
+Models
+\resource\MGEModels\box.gms
+\resource\MGEModels\sphereh.gms
+\resource\MGEModels\gamer.gms
+\resource\MGEModels\lamp.gms
+\resource\MGEModels\BMW 7S\bmw.gms
+GraphMaps
+\resource\MGEScripts\FirstGraphMap.mges
+PhisMaps
+\resource\MGEScripts\FirstPhisMap.mges
+Script end(((

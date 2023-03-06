@@ -1,0 +1,10 @@
+This script created for Maze Game Engine
+FullScreen
+False
+Resolution	///if FullScreen=false
+1366 768
+Texture Quality
+Low
+Graphics Quality
+Low
+0
