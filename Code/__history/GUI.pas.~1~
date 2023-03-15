@@ -301,8 +301,7 @@ LoadFizTer();
 
   UnT:=0.025;
   Gen:=false;
-  //if FSN<>'True' then
-  StartSetWindow();
+  if FSN<>'True' then StartSetWindow();
   PhBox.SetBox(100,-200,20,20,20,20);
 
 
