@@ -4,7 +4,7 @@ interface
  uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, DglOpenGL, DGLUT, Textures, Mesh, Resurce, ExtCtrls,Command,GFonts,math,
-  GameLavels,Mechanic,Controller,Scripter,Phisics,MGEFBO;
+  Mechanic,Controller,Scripter,Phisics,MGEFBO;
 
 Type
   PTLPlayer = record
@@ -272,31 +272,40 @@ end;
      if (Commande=false) then
        begin
 
-
   If GameMode=0 then begin
-      Phantom.UpdateP([],PhizPlane,PhizFence,Polg,
+      Phantom.UpdateP([BossCar.MCP[0],BossCar.MCP[1],BossCar.MCP[2]],PhizPlane,PhizFence,Polg,
         K_D(VK_W),K_D(VK_A),K_D(VK_S),K_D(VK_D),K_D(VK_Space));
+
+      BossCar.UpdateP([Phantom.MCP[0],Phantom.MCP[1],Phantom.MCP[2]],PhizPlane,PhizFence,Polg,
+        Boss.KW,Boss.KA,Boss.KS,Boss.KD,Boss.Ksp);
+
       Charact[0].UpdateP([],PhizPlane,PhizFence,Polg,10,
         Bot1.KW,Bot1.KA,Bot1.KS,Bot1.KD,false);
+        
 
   end else begin
       Phantom.UpdateP([],PhizPlane,PhizFence,Polg,
+        false,false,false,false,false);
+
+      BossCar.UpdateP([],PhizPlane,PhizFence,Polg,
         false,false,false,false,false);
 
     redview:=Cam_Move(view);
   end;
   end;
 
-     
-
         if K_D(VK_RButton)=true then begin
           Mouse_Move();
           MyYC:=P.AngleY;
         end;
+        
     If K_D(VK_L)=true then MyPointPut:=redview.p;
-     
+
 
    Bot1.update(Charact[0], MyPointPut);
+   Boss.update(BossCar,Race1.RacePoint[TPR]);
+
+
 end;
 
 procedure Check_test();

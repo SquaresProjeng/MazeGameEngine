@@ -6,8 +6,8 @@ object Form1: TForm1
   BiDiMode = bdLeftToRight
   BorderStyle = bsNone
   Caption = 'MazeGameEngine v1.01b'
-  ClientHeight = 592
-  ClientWidth = 944
+  ClientHeight = 794
+  ClientWidth = 1227
   Color = clSilver
   TransparentColorValue = clNone
   Ctl3D = False
@@ -22,7 +22,6 @@ object Form1: TForm1
   Position = poDesktopCenter
   PrintScale = poNone
   Scaled = False
-  WindowState = wsMaximized
   OnClose = FormClose
   OnCreate = FormCreate
   OnMouseWheelDown = FormMouseWheelDown

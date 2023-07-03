@@ -329,7 +329,7 @@ procedure RenderText(text:String;px,py,sx,sy:real; MFont:MGEFont);
 procedure MGEBoneModel(x,y,z,rnx,rny,rnz,rx,ry,rz,sx,sy,sz:real; model:TGLMultyMesh; Texture:GLUint);
 
 implementation
-uses GUI,GUIUnit, Phisics;
+uses GUI, GUIUnit, Phisics;
 
 
 procedure MGEBoneModel(x,y,z,rnx,rny,rnz,rx,ry,rz,sx,sy,sz:real; model:TGLMultyMesh; Texture:GLUint);
@@ -1815,7 +1815,7 @@ begin
   glViewport(0, 0,  MGEW, MGEH); //выделяем область куда будет выводиться наш буфер
   glMatrixMode ( GL_PROJECTION ); //переходим в матрицу проекции
   glLoadIdentity;  //сбрасываем текущую матрицу
-  gluPerspective(50+((30/17)*Phantom.Speed*10), MGEW/ MGEH,1,80000); //Область видимости
+  gluPerspective(50+((30/17)*Phantom.Speed*15), MGEW/ MGEH,1,80000); //Область видимости
   glMatrixMode ( GL_MODELVIEW ); //переходим в модельную матрицу
   glLoadIdentity;//сбрасываем текущую матрицу
 
@@ -1833,9 +1833,9 @@ begin
 glLightfv(GL_LIGHT0, GL_AMBIENT, @ambient);
 glLightfv(GL_LIGHT0, GL_POSITION, @glLightPos);
 
-glLightPos[0]:=3000;
-glLightPos[1]:=3000;
-glLightPos[2]:=500;
+glLightPos[0]:=0;
+glLightPos[1]:=1000;
+glLightPos[2]:=2000;
 
 
 
@@ -1964,11 +1964,31 @@ glEnable(GL_FOG);
 
 
   RenderVehicle(Phantom,90,3,6,TGATex[6],TGATex[1]);
+  RenderVehicle(BossCar,90,3,6,TGATex[6],TGATex[1]);
+
 
 /////////////////////////////////////////////////////////////////////////
 
+  Race1.Apdate(BossCar,SuperInt,TPR);
+
+  CheckPoint.Ubdate(SetP3D(view.angleX,0,0),SetP3D(Race1.RacePoint[TPR].x,400,
+  Race1.RacePoint[TPR].z));
+  
+  CheckPoint.Draw;
+
+
+    
+  Race2.Apdate(Phantom,SI,TTR);
+
+  CheckPoint.Ubdate(SetP3D(view.angleX,0,0),SetP3D(Race2.RacePoint[TTR].x,400,
+  Race2.RacePoint[TTR].z));
+
+  CheckPoint.Draw;
+
 
   DLight();
+
+
 
 
 
@@ -2003,6 +2023,18 @@ glEnable(GL_FOG);
       //RenderSprite(-p.p.x,-p.p.z,4096,4096,p.AngleX,TGATex[0]);
 
 If GameMode=0 then begin
+
+   if SuperInt=0 then begin
+     StarButton.BShowing:=true;
+     StarButton.PutBut((MGEH/15),(MGEH/15),MGEW/2,(MGEH/20)*(4));
+     StarButton.Aktivate(GUICursor);
+  end else
+  begin
+     StarButton.BShowing:=false;
+  end;
+
+
+
       minmap.Create(TGATex[0],MGEW/8,MGEH-MGEH/8,MGEW/10,MGEH/10);
       minmap.Draw(-Phantom.p.x,Phantom.p.z,3000,Phantom.AngleX+90,0.2+(abs(Phantom.Speed/4)));
       RenderSprite(MGEW/8,MGEH-MGEH/8,MGEW/60/(1+abs(P.Speed/2)),MGEH/40/(1+abs(P.Speed/2)),0,TGATex[5]);
@@ -2017,6 +2049,10 @@ If GameMode=0 then begin
    MenuN[10].Draw;
 end;
 
+     if (StarButton.State=2) then begin
+       Race1.StartRace(BossCar);
+       Race2.StartRace(Phantom);
+    end;
 
    If GameMode=1 then begin
       TextDraw(2,9,1.5,1.5, 'MID  :   '+IntToStr(TecModID));

@@ -11,5 +11,7 @@
     <Transaction>2021.11.05 17:57:23.786.pas,C:\Users\Соня\Desktop\Мини RPG игра на PascalABC\SP Racer 04_11_2021\MGE (Clear) v.002\code\Unit1.pas=C:\Users\Соня\Desktop\Мини RPG игра на PascalABC\SP Racer 04_11_2021\MGE (Clear) v.002\code\MGEAIController.pas</Transaction>
     <Transaction>2021.11.13 19:32:56.916.pas,C:\Users\Соня\Desktop\Мини RPG игра на PascalABC\MG Engine (Map Redactor)\MGE (Clear) v.002\code\Unit2.pas=C:\Users\Соня\Desktop\Мини RPG игра на PascalABC\MG Engine (Map Redactor)\MGE (Clear) v.002\code\upinst.pas</Transaction>
     <Transaction>2021.11.13 19:32:56.916.dfm,C:\Users\Соня\Desktop\Мини RPG игра на PascalABC\MG Engine (Map Redactor)\MGE (Clear) v.002\code\Unit2.dfm=C:\Users\Соня\Desktop\Мини RPG игра на PascalABC\MG Engine (Map Redactor)\MGE (Clear) v.002\code\upinst.dfm</Transaction>
+    <Transaction>2023.06.27 16:31:16.738.pas,C:\Users\Соня\Desktop\Squares Projeng\Гонка на старом движке\MazeGameEngine-main\Code\EnScene.pas=</Transaction>
+    <Transaction>2023.06.27 16:32:05.510.pas,C:\Users\Соня\Desktop\Squares Projeng\Гонка на старом движке\MazeGameEngine-main\Code\Gamelavels.pas=</Transaction>
   </Transactions>
 </BorlandProject>

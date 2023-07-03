@@ -7,8 +7,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DglOpenGL, DGLUT, mmSystem, Textures, Mesh, Resurce, ExtCtrls,Command,GFonts,math,
-  GameLavels,Mechanic,Controller,Scripter,Phisics,GUIUnit,MGEFBO,
+  Dialogs, DglOpenGL, DGLUT, mmSystem, Textures, Mesh, Resurce, ExtCtrls, Command,GFonts,math,
+  Mechanic,Controller,Scripter,Phisics,GUIUnit,MGEFBO,
   Bass,MGEAudioEngine,Animation,MGEAIController,Neural;
 
 
@@ -83,9 +83,10 @@ var
 
   Frp,frm,frf,TPR,SuperInt,TTR,SI,TecModID,TecTexID,OLS,FrameA:integer;
   CRX,CRY,DayT,TecSizeXID,TecSizeYID,TecSizeZID,TecRotID,AnUp,UnT:real;
-  Phantom:MGEVehicle;
+  Phantom, BossCar:MGEVehicle;
 
   CheckPoint:MGE3DSprite;
+
   MyOList:MGE3DObjectList;
   GameMode:Byte;
   drive:boolean;
@@ -93,12 +94,14 @@ var
 
   Charact:array[0..1] of MGEСharacter;
   Bot1:MGEBot;
+  Boss:MGEDriver;
+  StarButton:MGEButton;
 
   
 
 
   Mass:array[0..65,0..65] of Byte;
-
+  Race1,Race2:MGERace;
 
 
 
@@ -140,8 +143,8 @@ begin
               NPlG:=NPlG+1;
               SetLength(Polg,NPlG);
               Polg[NPlG-1].SetTriangle(TempVert[TempF[I][0]].x,TempVert[TempF[I][0]].z+Upi,TempVert[TempF[I][0]].y,
-                                        TempVert[TempF[I][1]].x,TempVert[TempF[I][1]].z+Upi,TempVert[TempF[I][1]].y,
-                                        TempVert[TempF[I][2]].x,TempVert[TempF[I][2]].z+Upi,TempVert[TempF[I][2]].y);
+                                        TempVert[TempF[I][2]].x,TempVert[TempF[I][2]].z+Upi,TempVert[TempF[I][2]].y,
+                                        TempVert[TempF[I][1]].x,TempVert[TempF[I][1]].z+Upi,TempVert[TempF[I][1]].y);
             end;
 
 
@@ -247,14 +250,26 @@ LoadFizTer();
 
 
  ////////////////Наша машинка
-  Phantom.Create(SetP3D(128,13,1372),SetP3D(5,5,5),SetP3D(0.1,0.1,0.1),
-  7,2.5,3,3,1.30,9.25,-2.5,2,120);
+  Phantom.Create(SetP3D(386,294,-2),SetP3D(5,5,5),SetP3D(0.1,0.1,0.1),
+  7,2.5,3,3,1.30,9.25,-2.5,1.5,210);
+
+  BossCar.Create(SetP3D(386,274,-2),SetP3D(5,5,5),SetP3D(0.1,0.1,0.1),
+  7,2.5,3,3,1.30,9.25,-2.5,3,200);
 
 ////////////////////////////////
 
 
-
-
+  Race1.Create([SetP3D(407,160,-35),
+                SetP3D(123,160,31),
+                SetP3D(-97,160,48),
+                SetP3D(-394,160,465),
+                SetP3D(-165,160,885),
+                SetP3D(841,160,804),
+                SetP3D(1118,160,454),
+                SetP3D(1073,160,77),
+                SetP3D(904,160,-124),
+                SetP3D(675,160,-132)]);
+  Race2:=Race1;
   
 
   MenuMap.Create(600,600,2000,2000,0,Ttextobj[5]);
@@ -271,9 +286,11 @@ LoadFizTer();
   Ttextobj[51]:=CreateMGETexture(sWidth,sHeight, GL_RGBA,@blm3);
   Ttextobj[57]:=CreateMGETexture(sWidth,sHeight, GL_RGBA,@blm4);
 
-  
+
 
   CreateMenu();
+  StarButton.Create(40,40,30,30,MGEFR[4],True,'Начать гонку');
+
 
   MenuStay:=0;  //////////// =0 - меню
   P.create(0,10,0,20,60,20);
@@ -292,16 +309,17 @@ LoadFizTer();
 
 //////////////////////////////////////////////////////////////
 ///  /////////////////////////Звук
- // CheckAudioEngine();
+  CheckAudioEngine();
   //init BASS;
- // if not BASS_Init(-1,44100,0,Application.Handle,nil) then Showmessage('Can''t initialize device');
- // Audio.LoadAB(MGELocation+'\resource\MGEAudio\Marmalade.mp3');
+  if not BASS_Init(-1,44100,0,Application.Handle,nil) then Showmessage('Can''t initialize device');
+  Audio.LoadAB(MGELocation+'\resource\Car.mp3');
 
   MnoP:=1;
 
   UnT:=0.025;
   Gen:=false;
-  if FSN<>'True' then StartSetWindow();
+  //if FSN<>'True' then
+  StartSetWindow();
   PhBox.SetBox(100,-200,20,20,20,20);
 
 
@@ -354,6 +372,11 @@ begin
     if (K_D(VK_LButton)=true) then flying:=true;
     if (K_D(VK_LButton)=false) then flying:=false;
 
+     if (bclick=true) then begin
+       Race1.StartRace(BossCar);
+       Race2.StartRace(Phantom);
+    end;
+
     if MenuStay=100 then Form1.Close;
 
 /////////////////////ставим камеру персонажа ////////////////////////
@@ -384,14 +407,16 @@ end;
 procedure TForm1.PhizProcessTimer(Sender: TObject);
 begin
   UpdatePhisicsG();
-
+  if (K_D(VK_W)=true) or (K_D(VK_S)=true) then Audio.Play(0,False,0,0,0) else Audio.Stop(0);
 end;
 procedure TForm1.Timer1Timer(Sender: TObject);
 begin
 
 
   //if (K_D(VK_W)<>false){ and (drive=false) }then Audio.Play(0,false,Phantom.MCP[1].p.x,Phantom.MCP[1].p.y,Phantom.MCP[1].p.z);
-  //if (K_D(VK_W)=false) and (drive=true) then Audio.Stop(0);
+  if (K_D(VK_G)=true) then begin Race1.StartRace(Phantom);
+  end;
+
 
   FPS:=FP;
   FPST:=inttostr(FPS);
